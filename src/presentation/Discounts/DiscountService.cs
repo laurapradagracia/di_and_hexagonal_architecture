@@ -2,12 +2,22 @@
 
 namespace ShopingCart.API.Discounts
 {
-    public class DiscountService
+    public class DiscountService : IDiscountService
     {
-        public Discount FigureDiscount(IEnumerable<Product> products)
+        public DiscountResponse FigureDiscount(IEnumerable<Product> products)
         {
             var discount = new Discount(products.ToList());
-            return discount;
+            if(!discount.IsAny)
+            {
+                return new NoDiscountResponse { Products = discount.BillableProducts };
+            }
+            if(discount.Factor==Discount.HALF_OF_FACTOR)
+            {
+                var discountResponse = new HalfOffDiscountResponse { Products = discount.BillableProducts };
+                discountResponse.SetDiscount(discount.Factor);
+                return discountResponse;
+            }
+            return null;
         }
     }
 }
