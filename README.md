@@ -3,9 +3,9 @@ On this session we are going to tackle Dependency Injection and Hexagonal archit
 
 ## Overview
 
-1- Create project with dotnet command line
-2- Use API as an entry point to solve to the supermarket discount application
-3- Dependency injection
+1. Create project with dotnet command line
+2. Use API as an entry point to solve to the supermarket discount application
+3. Dependency injection
 
 ### Create a project with dotnet command line
 
