@@ -7,6 +7,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{7EA698FA-9AC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopingCart.API", "src\presentation\ShopingCart.API.csproj", "{E1536B47-A508-4DE5-B214-A6A06408EE8F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShoppingCart.Test", "test\ShoppingCart.Test.csproj", "{441C2312-4D0D-422A-B56F-B7AD87E70699}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,6 +22,10 @@ Global
 		{E1536B47-A508-4DE5-B214-A6A06408EE8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E1536B47-A508-4DE5-B214-A6A06408EE8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E1536B47-A508-4DE5-B214-A6A06408EE8F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{441C2312-4D0D-422A-B56F-B7AD87E70699}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{441C2312-4D0D-422A-B56F-B7AD87E70699}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{441C2312-4D0D-422A-B56F-B7AD87E70699}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{441C2312-4D0D-422A-B56F-B7AD87E70699}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{E1536B47-A508-4DE5-B214-A6A06408EE8F} = {7EA698FA-9ACC-40D6-85A6-E6F273B9FC47}
