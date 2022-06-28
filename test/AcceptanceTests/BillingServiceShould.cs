@@ -16,6 +16,7 @@ namespace ShoppingCart.Test.AcceptanceTests
 
         public BillingServiceShould()
         {
+            _productRespository.Setup(x => x.GetAll()).Returns(new List<Product> { SNEAKERS });
             _billingService = new BillingService(
                 new ProductService(_productRespository.Object),
                 new DiscountService());
