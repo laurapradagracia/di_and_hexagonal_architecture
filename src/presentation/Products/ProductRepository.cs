@@ -1,6 +1,6 @@
 ﻿namespace ShopingCart.API.Products
 {
-    public class ProductRepository
+    public class ProductRepository : IProductRepository
     {
         private readonly Product[] _products = new Product[]
         {

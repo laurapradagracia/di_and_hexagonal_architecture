@@ -1,15 +1,21 @@
-﻿namespace ShopingCart.API.Products
+﻿namespace ShopingCart.API.Products;
+
+public class ProductService : IProductService
 {
-    public class ProductService
+    private readonly IProductRepository _productRepository;
+
+    public ProductService(IProductRepository productRepository)
     {
-        private readonly ProductRepository _productRepository;
-
-        public ProductService(ProductRepository productRepository)
-        {
-            _productRepository = productRepository;
-        }
-
-        public IEnumerable<Product> GetAll() =>
-            _productRepository.GetAll();
+        _productRepository = productRepository;
     }
+
+    public bool AreAllValid(IEnumerable<Product> products)
+    {
+        var existingProducts = _productRepository.GetAll();
+        return products.All(x => existingProducts.Contains(x));
+    }
+        
+
+    public IEnumerable<Product> GetAll() =>
+        _productRepository.GetAll();
 }
