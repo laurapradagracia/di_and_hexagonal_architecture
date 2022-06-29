@@ -17,3 +17,22 @@ We will create:
 * src folder and presentation inside
 * webapi project in src/presentation
 
+## Challenge
+
+1. Check product existence
+2. Implement discounts
+
+### Check product existence
+
+On ProductServiceShould file, make Mock IProductRepository and unit test the following
+* All products found
+* Some missing
+* None found
+
+### Implement discounts
+
+On UnitTests folder Create a DiscountServiceShould and unit test the following
+* 12 units of the same product should get 50% discount
+* 3 units of the same product should get one free
+* 3 different single unit products should get one free
+* 12 different products would get you 4 free products
