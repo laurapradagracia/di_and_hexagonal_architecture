@@ -1,4 +1,5 @@
 using ShopingCart.API.Billing;
+using ShopingCart.API.Discounts;
 using ShopingCart.API.Products;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -13,6 +14,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddSingleton<IProductService, ProductService>();
 builder.Services.AddSingleton<IProductRepository, ProductRepository>();
 builder.Services.AddSingleton<IBillingService, BillingService>();
+builder.Services.AddSingleton<IDiscountService, DiscountService>();
 
 var app = builder.Build();
 
